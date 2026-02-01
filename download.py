@@ -71,7 +71,7 @@ def get_captcha_value(scid, retry_count=0):
 
     response = requests.get(url)
     cookies = response.cookies
-    session_id = cookies.get("PHPSESSID")
+    session_id = cookies.get("PHPSESAID")
     image = response.content
     with open("captcha.png", "wb") as f:
         f.write(image)
